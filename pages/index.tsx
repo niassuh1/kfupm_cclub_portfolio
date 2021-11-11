@@ -31,7 +31,7 @@ const Home: NextPage = ({}) => {
       />
       <HeroCard
         href="/about"
-        src="/images/woman.svg"
+        src="/images/Woman.svg"
         title="تواصل معنا ونرد بسرعة البرق"
         subtitle="نقدم لك استشارات تقنية لمشروعك أو اعمالك اللي تحتاجنا فيها"
         linkTitle="تعاون معنا الآن"

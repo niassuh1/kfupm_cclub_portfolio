@@ -1,8 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap");
+
 @tailwind utilities;
 
 * {
   font-family: "Cairo";
+}
+
+@layer base {
+  @font-face {
+    font-family: "Cairo";
+    src: url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap");
+  }
 }

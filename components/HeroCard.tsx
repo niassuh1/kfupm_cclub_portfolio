@@ -9,6 +9,7 @@ interface HeroProps {
   title?: string;
   subtitle?: string;
   linkTitle?: string;
+  blob?: string;
   dir?: "rtl" | "ltr";
 }
 
@@ -18,21 +19,30 @@ const HeroCard: FC<HeroProps> = ({
   linkTitle,
   subtitle,
   title,
+  blob = "/images/blob1.svg",
   dir = "rtl",
 }) => {
   return (
     <div
       dir={dir}
-      className="flex flex-col mx-auto px-6 justify-center items-center mb-12 md:flex-row md:px-2"
+      className="relative flex flex-col mx-auto px-6 justify-center items-center mb-12 md:flex-row md:px-9"
     >
-      <span className="md:mx-9">
-        <Image src={src} layout="intrinsic" width={270} height={300} alt="" />
+      <div className="relative lg:block hidden">
+        <span className="absolute left-[500px] right-[500px] top-[-200px] opacity-40">
+          <Image src={blob} layout="fixed" width={400} height={450} alt="" />
+        </span>
+      </div>
+
+      <span className="relative md:mx-9 z-10">
+        <Image src={src} layout="intrinsic" width={330} height={330} alt="" />
       </span>
-      <div className="flex flex-col justify-start">
-        <h1 className="text-[30px] text-center my-4 font-bold md:text-start md:text-3xl">
+      <div className="flex flex-col justify-start z-10">
+        <h1 className="text-[30px] text-center my-4 font-bold md:text-start md:text-3xl lg:text-[2.5rem]">
           {title}
         </h1>
-        <p className="text-center mb-4 md:text-start">{subtitle}</p>
+        <p className="text-center mb-4 md:text-start md:text-lg z-10 lg:text-xl">
+          {subtitle}
+        </p>
         <h2 className="text-2xl text-center mb-4 md:text-start ">
           {linkTitle}
         </h2>

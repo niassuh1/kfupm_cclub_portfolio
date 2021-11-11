@@ -1,9 +1,4 @@
-import React, {
-  useState,
-  MouseEvent,
-  useEffect,
-  MouseEventHandler,
-} from "react";
+import React, { useState, MouseEvent } from "react";
 import Link, { LinkProps } from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -22,11 +17,11 @@ export const Header: React.FC = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <header className="flex relative transition-colors ease-in-out justify-between items-center p-4 z-50  dark:text-white lg:p-0 lg:px-12 lg:pt-2">
+    <header className="flex relative transition-colors ease-in-out justify-between items-center p-4 z-[99] dark:text-white lg:p-0 lg:px-12 lg:py-4 ">
       <Link href="/">
         <a className="flex items-center">
-          <Image width="40" height="40" alt="logo" src="/images/logo.svg" />
-          <span className="text-[10px] font-bold lg:text-[13px]">
+          <Image width="50" height="50" alt="logo" src="/images/logo.svg" />
+          <span className="text-[13px] font-bold lg:text-[14px]">
             نادي الحاسب الالي
           </span>
         </a>

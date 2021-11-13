@@ -53,7 +53,6 @@ export const Header: React.FC = () => {
 };
 
 const Nav: React.FC<{ isOpen?: boolean }> = ({ children, isOpen }) => {
-  const [pos, setPos] = useState(1);
   return (
     <nav
       className={`flex left-0 fixed bg-white top-0 transform ${
@@ -76,7 +75,7 @@ const NavItem: React.FC<LinkProps> = (props) => {
     <li className="flex mx-10 lg:mx-5">
       <Link href={props.href}>
         <a
-          className={`px-3 py-2  lg:py-4 font-semibold text-sm border-b-2 ${
+          className={`px-3 py-2  font-semibold text-base border-b-2 lg:py-4  ${
             pathMatch ? "border-blue-600" : "border-transparent "
           }`}
         >

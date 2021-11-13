@@ -27,14 +27,14 @@ const HeroCard: FC<HeroProps> = ({
       dir={dir}
       className="relative flex flex-col mx-auto px-6 justify-center items-center mb-12 md:flex-row md:px-9"
     >
-      <div className="relative lg:block hidden">
+      <div className="relative  hidden lg:block">
         <span className="absolute left-[500px] right-[500px] top-[-200px] opacity-40">
           <Image src={blob} layout="fixed" width={400} height={450} alt="" />
         </span>
       </div>
 
       <span className="relative md:mx-9 z-10">
-        <Image src={src} layout="intrinsic" width={330} height={330} alt="" />
+        <Image src={src} layout="intrinsic" width={390} height={380} alt="" />
       </span>
       <div className="flex flex-col justify-start z-10">
         <h1 className="text-[30px] text-center my-4 font-bold md:text-start md:text-3xl lg:text-[2.5rem]">
